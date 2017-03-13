@@ -60,7 +60,7 @@
               return false;
             }
           });
-          if ( !$options.length ) {
+          if ( !$options.length  || ($options.length==1 && $options[0].value=="") ) {
             $parent.append('<option value="' + oldValue + '">' + allOptions[oldValue].label + '</option>');
           }
         });
